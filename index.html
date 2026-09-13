@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>THRONEROOM '26 | Outreach Anmeldung</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="cross">✝</div>
+
+      <p class="small-title">DU BIST EINGELADEN</p>
+
+      <h1>THRONEROOM <span>'26</span></h1>
+
+      <p class="subtitle">Outreach Anmeldung</p>
+
+      <div class="event-date">
+        <span class="event-line"></span>
+        <span class="event-icon">✦</span>
+        <span>17.10.2026</span>
+        <span class="event-icon">✦</span>
+        <span class="event-line"></span>
+      </div>
+
+      <p class="intro">
+        Wir freuen uns, dich bei uns begrüßen zu dürfen.
+        Bitte melde dich für Throneroom '26 an.
+      </p>
+
+    </section>
+
+
+    <section class="registration-card">
+
+      <h2>Anmeldung</h2>
+
+      <p class="card-description">
+        Bitte fülle die folgenden Angaben aus.
+      </p>
+
+
+      <form id="registrationForm">
+
+
+        <!-- VORNAME -->
+
+        <div class="input-group">
+
+          <label for="first_name">
+            Vorname
+          </label>
+
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="Dein Vorname"
+            required
+          >
+
+        </div>
+
+
+        <!-- TELEFONNUMMER -->
+
+        <div class="input-group">
+
+          <label for="telephone">
+            Telefonnummer <span class="optional">(freiwillig)</span>
+          </label>
+
+          <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            placeholder="z. B. 0176 12345678"
+          >
+
+        </div>
+
+
+        <!-- ALTER -->
+
+        <div class="input-group">
+
+          <label for="age">
+            Alter
+          </label>
+
+          <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Dein Alter"
+            min="1"
+            max="100"
+            required
+          >
+
+        </div>
+
+
+        <!-- ALLEINE / MIT ANDEREN -->
+
+        <div class="input-group">
+
+          <label>
+            Kommst du alleine oder mit anderen?
+          </label>
+
+          <div class="options">
+
+            <label class="option">
+
+              <input
+                type="radio"
+                name="attendance"
+                value="Alone"
+                required
+                onchange="togglePeople(false)"
+              >
+
+              <span>Ich komme alleine</span>
+
+            </label>
+
+
+            <label class="option">
+
+              <input
+                type="radio"
+                name="attendance"
+                value="With others"
+                onchange="togglePeople(true)"
+              >
+
+              <span>Ich komme mit anderen</span>
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- ANZAHL PERSONEN -->
+
+        <div
+          class="input-group companion-field"
+          id="peopleField"
+          style="display: none;"
+        >
+
+          <label for="people_with">
+            Wie viele Personen kommen mit dir?
+          </label>
+
+          <input
+            type="number"
+            id="people_with"
+            name="people_with"
+            placeholder="Anzahl der Personen"
+            min="1"
+            max="50"
+          >
+
+        </div>
+
+
+        <!-- SITZUNG -->
+
+        <div class="input-group">
+
+          <label>
+            Wann bist du dabei?
+          </label>
+
+          <div class="options">
+
+            <label class="option">
+
+              <input
+                type="radio"
+                name="session"
+                value="Mittagspause & 2. Sitzung"
+                required
+              >
+
+              <span>Mittagspause & 2. Sitzung</span>
+
+            </label>
+
+
+            <label class="option">
+
+              <input
+                type="radio"
+                name="session"
+                value="Nur 2. Sitzung"
+              >
+
+              <span>Nur 2. Sitzung</span>
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- ABSENDEN -->
+
+        <button type="submit">
+          JETZT ANMELDEN
+        </button>
+
+
+        <p id="message"></p>
+
+      </form>
+
+    </section>
+
+
+    <footer>
+
+      <p>THRONEROOM '26</p>
+
+      <p>17.10.2026</p>
+
+      <p>© 2026</p>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
